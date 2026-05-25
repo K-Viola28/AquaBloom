@@ -54,32 +54,10 @@ while enjoying a clean and aesthetic experience 💜
 
 <div align="center">
 
-### 📸 Preview
-
-<img src="https://placehold.co/800x400/1f1f1f/BB6BD9?text=AquaBloom+Preview" />
-
-</div>
-
----
-
-<div align="center">
-
 ### 🌌 Live Demo
 
 <a href="YOUR-LIVE-LINK">
   <img src="https://img.shields.io/badge/View%20Live%20Site-BB6BD9?style=for-the-badge&logo=vercel&logoColor=white" />
-</a>
-
-</div>
-
----
-
-<div align="center">
-
-### 📬 Connect
-
-<a href="mailto:your@email.com">
-  <img src="https://img.shields.io/badge/Email%20Me-BB6BD9?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 
 </div>
