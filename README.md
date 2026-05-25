@@ -56,7 +56,7 @@ while enjoying a clean and aesthetic experience 💜
 
 ### 🌌 Live Demo
 
-<a href="YOUR-LIVE-LINK">
+<a href="https://k-viola28.github.io/AquaBloom/">
   <img src="https://img.shields.io/badge/View%20Live%20Site-BB6BD9?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
 
