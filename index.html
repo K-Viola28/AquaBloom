@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaBloom | Water Intake Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <header class="topbar glass-card">
+      <div>
+        <p class="eyebrow">Premium wellness dashboard</p>
+        <h1>AquaBloom</h1>
+        <p class="subtle">Track hydration in ml, glasses, and bottles with a playful soft-3D flow.</p>
+      </div>
+      <div class="topbar-actions">
+        <button class="icon-bubble" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <span class="icon">Mode</span>
+        </button>
+        <button class="icon-bubble" id="soundToggle" type="button" aria-pressed="false" aria-label="Toggle sound">
+          <span class="icon">Sound</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="hero-panel glass-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Today's hydration</p>
+          <h2>Build a steadier water habit.</h2>
+          <p id="motivationMessage" class="motivation">Hydration level: Calm and steady.</p>
+
+          <div class="metrics-row">
+            <article class="metric-pill">
+              <span class="metric-label">Consumed</span>
+              <strong id="consumedMl">0 ml</strong>
+            </article>
+            <article class="metric-pill">
+              <span class="metric-label">Remaining</span>
+              <strong id="remainingMl">2000 ml</strong>
+            </article>
+            <article class="metric-pill">
+              <span class="metric-label">Goal</span>
+              <strong id="goalDisplay">2000 ml</strong>
+            </article>
+          </div>
+
+          <div class="conversion-card">
+            <p class="conversion-title">Live conversion</p>
+            <p id="conversionText">You've drunk 0 bottles = 0 glasses = 0 ml</p>
+          </div>
+        </div>
+
+        <div class="progress-wrapper">
+          <div class="progress-ring" id="progressRing" style="--progress: 0;">
+            <div class="progress-inner glass-card">
+              <span class="progress-kicker">Progress</span>
+              <strong id="progressPercent">0%</strong>
+              <span id="progressCaption">0 / 2000 ml</span>
+            </div>
+          </div>
+          <div class="droplet-stage" id="dropletStage" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="action-grid">
+        <article class="glass-card quick-add-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Quick add</p>
+              <h3>Tap a bubble to log water</h3>
+            </div>
+          </div>
+
+          <div class="bubble-grid">
+            <button class="bubble-btn" id="glassQuickAdd" type="button" data-kind="glass">
+              <span class="bubble-icon">GL</span>
+              <strong id="glassQuickAddLabel">+1 Glass</strong>
+              <small id="glassQuickAddAmount">250 ml</small>
+            </button>
+            <button class="bubble-btn" id="bottleQuickAdd" type="button" data-kind="bottle">
+              <span class="bubble-icon">BT</span>
+              <strong id="bottleQuickAddLabel">+1 Bottle</strong>
+              <small id="bottleQuickAddAmount">500 ml</small>
+            </button>
+            <button class="bubble-btn" id="boostQuickAdd" type="button" data-kind="boost">
+              <span class="bubble-icon">UP</span>
+              <strong id="boostQuickAddLabel">+Hydration Boost</strong>
+              <small id="boostQuickAddAmount">1000 ml</small>
+            </button>
+          </div>
+
+          <form class="custom-intake-form" id="customIntakeForm">
+            <label for="customIntake">Custom amount (ml)</label>
+            <div class="input-row">
+              <input id="customIntake" name="customIntake" type="number" min="50" step="50" placeholder="Enter ml">
+              <button class="primary-btn" type="submit">Add Water</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="glass-card settings-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Daily setup</p>
+              <h3>Personalize your goal</h3>
+            </div>
+          </div>
+
+          <form class="settings-form" id="settingsForm">
+            <label for="goalAmount">Daily goal</label>
+            <div class="input-row split">
+              <input id="goalAmount" name="goalAmount" type="number" min="250" step="50" value="2000" inputmode="decimal" placeholder="2000">
+              <select id="goalUnit" name="goalUnit">
+                <option value="ml">ml</option>
+                <option value="l">liters</option>
+              </select>
+            </div>
+            <p class="field-hint" id="goalHint">Set your goal in ml or liters. The input adapts automatically.</p>
+            <div class="goal-preview" id="goalPreview" aria-live="polite">
+              <span class="goal-preview-label">Target preview</span>
+              <strong id="goalPreviewValue">2.0 L / 2000 ml</strong>
+            </div>
+
+            <label for="glassSize">Glass size</label>
+            <select id="glassSize" name="glassSize">
+              <option value="250">250 ml</option>
+              <option value="300">300 ml</option>
+              <option value="350">350 ml</option>
+            </select>
+
+            <label for="bottleSize">Bottle size</label>
+            <select id="bottleSize" name="bottleSize">
+              <option value="500">500 ml</option>
+              <option value="750">750 ml</option>
+              <option value="1000">1 L</option>
+            </select>
+
+            <button class="primary-btn" type="submit">Save Preferences</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="history-panel glass-card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">History</p>
+            <h3>Last 7 days</h3>
+          </div>
+          <p class="subtle">Daily totals stored locally and reset at midnight.</p>
+        </div>
+
+        <div class="history-chart" id="historyChart" aria-label="Water intake history chart"></div>
+      </section>
+    </main>
+
+    <button class="fab" id="fabAdd" type="button" aria-label="Quick add water">+</button>
+    <div class="toast" id="toast"></div>
+    <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
