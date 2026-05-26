@@ -1,19 +1,5 @@
 <div align="center">
 
-# 💧 AquaBloom
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=500&size=30&pause=1000&color=BB6BD9&center=true&vCenter=true&width=700&lines=Track+your+water+intake+💧;Healthy+habits+made+simple;Minimal+.+Interactive+.+Calm" />
-
-</div>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=gradient&customColorList=12,20,24,30&text=AquaBloom%20💜&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=35" />
-</p>
-
----
-
-<div align="center">
-
 ### 🌊 About AquaBloom
 
 AquaBloom is a calming and interactive water-tracking app  
@@ -63,7 +49,3 @@ while enjoying a clean and aesthetic experience 💜
 </div>
 
 ---
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=170&color=gradient&customColorList=12,20,24,30&section=footer&text=Stay%20Hydrated%20💧&fontSize=30&fontColor=ffffff&animation=twinkling" />
-</p>
